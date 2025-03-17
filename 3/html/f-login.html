@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Login - Project Connect</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/f-login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Faculty Login</h2>
+        <form id="faculty-login-form">
+            <label for="faculty-number">Faculty Number</label>
+            <input type="text" id="faculty-number" name="faculty-number" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <a href="home.html" class="back-link">← Back to home</a>
+    </div>
+
+    <script>
+        document.getElementById("faculty-login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Normally you would validate credentials here
+            window.location.href = "faculty-dashboard.html";
+        });
+    </script>
+</body>
+</html>
